@@ -24,7 +24,7 @@
 #include "EasyOgreExporterLog.h"
 #include <imtl.h>
 
-#include <nvimage/DirectDrawSurface.h>
+//#include <nvimage/DirectDrawSurface.h>
 
 #ifdef PRE_MAX_2010
 #include "IPathConfigMgr.h"
@@ -1921,9 +1921,9 @@ namespace EasyOgreExporter
 					  if(texExt == "dds")
 					  {
 						  //detect if the texture is a cubemap
-						  nv::DirectDrawSurface ddsMap(m_textures[i].absFilename[0].c_str());
-						  if(ddsMap.isValid() && ddsMap.isTextureCube())
-							  isCubic = true;
+						  //::DirectDrawSurface ddsMap(m_textures[i].absFilename[0].c_str());
+						  //(ddsMap.isValid() && ddsMap.isTextureCube())
+							//  isCubic = true;
 					  }
 					  if(isCubic)
 						  outMaterial << " cubic\n";

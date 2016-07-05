@@ -19,7 +19,7 @@
 
 #include "ExMaterial.h"
 #include "ExMaterialSet.h"
-#include <nvtt/nvtt.h>
+//#include <nvtt/nvtt.h>
 
 namespace EasyOgreExporter
 {
@@ -513,7 +513,7 @@ namespace EasyOgreExporter
                         }
                       }
                     }
- 
+#ifdef false
                     if(pBuff)
                     {
                       nvtt::InputOptions inputOptions;
@@ -552,6 +552,7 @@ namespace EasyOgreExporter
                       ddsMode = compressor.process(inputOptions, compressionOptions, outputOptions) ? 1 : -1;
     #endif            
                     }
+#endif
                   }
 
                   if(pBuff)
